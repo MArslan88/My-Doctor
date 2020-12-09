@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 mStartBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-//                        finish();
+                        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                        finish();
                     }
                 });
 

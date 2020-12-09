@@ -5,41 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:gravity="center"
     tools:context=".MainActivity">
 
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/slideViewPager"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="500dp">
-        </androidx.viewpager.widget.ViewPager>
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/slideViewPager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="500dp">
+                        </androidx.viewpager.widget.ViewPager>
 
-        <LinearLayout
-            android:id="@+id/dotsLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/slideViewPager"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:padding="20dp">
-        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/dotsLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/slideViewPager"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+                        </LinearLayout>
 
-        <Button
-            android:id="@+id/startBtn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:text="Getting Started"
-            android:textAllCaps="false"
-            android:layout_below="@+id/slideViewPager"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/btn_bg"
-            android:visibility="invisible"
-            />
-
-
-
+                        <Button
+                            android:id="@+id/startBtn"
+                            android:layout_width="300dp"
+                            android:layout_height="60dp"
+                            android:text="Getting Started"
+                            android:textSize="18sp"
+                            android:textAllCaps="false"
+                            android:layout_below="@+id/slideViewPager"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/btn_bg"
+                            android:visibility="invisible"
+                            />
+                </LinearLayout>
+        </ScrollView>
 
 
 </RelativeLayout>
